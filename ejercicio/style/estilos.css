@@ -1,12 +1,21 @@
 .texto-rosa{
     color: palevioletred;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
 }
 .texto-verde{
     color: green;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
 }
 .texto-aqua{
     color: aqua;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .texto-rojo{
     color: red;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
 }
+
