@@ -1,0 +1,14 @@
+.menu{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: cadetblue;
+    border-color: black;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.title{
+    position: relative;
+    color: blue;
+}
