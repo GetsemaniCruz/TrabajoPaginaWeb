@@ -1,14 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Registro</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <main>
-        
-    </main>
-    <script src="js/app.js"></script>
+  <main>
+    <h1 class="rojo">Registro</h1>
+    <form id="formulario">
+      <label for="nombre" class="texto">Nombre:</label>
+      <input type="text" id="nombre" class="input">
+
+      <label for="apellido" class="texto">Apellido:</label>
+      <input type="text" id="apellido" class="input">
+
+      <label for="fecha" class="texto">Fecha de nacimiento:</label>
+      <input type="date" id="fecha" class="input">
+
+      <p>Género:</p>
+      <label><input type="radio" name="genero" value="masculino"> Masculino</label>
+      <label><input type="radio" name="genero" value="femenino"> Femenino</label>
+      <label><input type="radio" name="genero" value="otro"> Otro</label>
+
+      <label>
+        <input type="checkbox" id="terminos" class="texto"> Acepto términos y condiciones
+      </label>
+
+      <div id="mensaje"></div>
+
+      <button type="button" id="enviar" class="boton">Enviar</button>
+    </form>
+  </main>
+
+  <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+.rojo{
+    color: rgb(124, 24, 24);
+    font-family: 'Times New Roman';
+}
+
+.boton{
+    background-color: rgb(85, 12, 48);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.texto{
+    font-family: 'Arial', sans-serif;
+    font-size: 17px;
+    color: #333;
+}
+
+.input{
+    padding: 8px;
+    border: 1px solid #2d45b1;
+    border-radius: 4px;
+}
