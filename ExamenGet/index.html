@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicación web para gestionar tareas personales">
+    <title>ListaTareas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="titulo texto">Lista de tareas</h1>
+    </header>
+
+    <nav>
+        <a href="https://www.nationalgeographicla.com/animales/gato-domestico">Agregar</a>
+        <a href="https://www.purina.es/encuentra-mascota/razas-de-gato">Tareas</a>
+    </nav>
+
+    <section class="agregar">
+        
+        <p class="texto">Titulo de la tarea</p>
+        <input type="text" name="titulo" id="titulo" min="10" max="200" class="input">
+        <p class="texto ">Fecha</p>
+        <input type="date" name="fecha" id="fecha" >
+
+        <p class="texto">Prioridad</p>
+        <input type="radio" name="prioridad" id="prioridad">Baja
+        <input type="radio" name="prioridad" id="prioridad">Media
+        <input type="radio" name="prioridad" id="prioridad">Alta
+
+        <div>
+            <input type="button" value="Agregar" class="button boton">
+        </div>
+    
+    </section>
+
+    <section class="tareas texto">
+        <p>Tus tareas</p>
+        <p></p>
+    </section>
+   
+</body>
+</html>
+
