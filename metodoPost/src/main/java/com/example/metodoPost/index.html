@@ -1,24 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Metodo Post</title>
+    <title>Formulario</title>
 </head>
 <body>
-    <form id="saludoForm">
-    <label for="nombre">
-        Nombre
-    </label>
-        <input type="text" id="nombre">
-        <label for="apellidop">
-            Nombre
-        </label>
-        <input type="text" id="apellidop">
-        <button type="submit">Enviar</button>
+<header>
+    <h1>Formulario</h1>
+</header>
+<main>
+    <form action="http://localhost:8080/saludo" method="post" class="formulario">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" class="campoObligatorio">
+
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" class="campoObligatorio">
+
+        <button type="submit" class="botonEviar">Enviar</button>
     </form>
-<h2>REspuesta del servidor</h2>
-<pre id="respuesta"></pre>
-<script
+    <div class="mostarerror"></div>
+</main>
+<script src="script.js"></script>
 </body>
 </html>
