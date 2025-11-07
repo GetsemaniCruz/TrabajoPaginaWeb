@@ -1,0 +1,26 @@
+.title{
+    color: #692166;
+}
+
+
+input {
+    margin-bottom: 15px;
+}
+.boton{
+    background-color: #997497;
+}
+
+.mensajeError{
+    color: #ff0000;
+}
+.mensajeSuccess{}
+
+.valido {
+    background-color: #e7ffe5;
+    border-color: green;
+}
+
+.invalido {
+    background-color: #ffdada;
+    border-color: red;
+}
