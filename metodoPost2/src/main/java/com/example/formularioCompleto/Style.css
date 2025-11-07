@@ -1,0 +1,27 @@
+.title{
+    color: #396eba;
+}
+
+
+input {
+    display: block;
+    width: 250px;
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.mensajeError{
+    color: #ff0000;
+}
+.mensajeSuccess{}
+
+.valido {
+    background-color: #e7ffe5;
+    border-color: green;
+}
+
+.invalido {
+    background-color: #ffdada;
+    border-color: red;
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Metodo post</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+<h1 class="title">Formulario completo</h1>
+
+<form id="saludoForm" action="http://localhost:8081/saludo"  method="POST" class="formulario">
+
+    <div class="name">
+        <label for="nombre">
+            Nombre
+        </label>
+        <input type="text" id="nombre" name="nombre" class="campoObligatorio">
+    </div>
+
+    <div class="lastName">
+        <label for="Apellido">
+            Apellido
+        </label>
+        <input type="text" id="apellido" name="apellido" class="campoObligatorio">
+    </div>
+
+    <div class="email">
+        <label for="correo">
+            Correo
+        </label>
+        <input type="text" id="correo" name="correo" class="campoObligatorio">
+    </div>
+
+    <div class="password">
+        <label for="contrasena">
+            Contrasena
+        </label>
+        <input type="password" id="contrasena" name="contrasena" class="campoObligatorio">
+    </div>
+
+
+    <button type="submit">Enviar</button>
+
+</form>
+
+<div class="mostrarError">
+
+</div>
+
+
+<script src="App.js">
+
+
+
+</script>
+</body>
+</html>
