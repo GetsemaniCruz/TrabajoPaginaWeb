@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método POST - Spring Boot</title>
+</head>
+<body>
+<h1>Ejemplo de método POST con Spring Boot</h1>
+
+<form id="saludoForm" >
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" required><br><br>
+
+    <label for="apellido">Apellido:</label><br>
+    <input type="text" id="apellido" required><br><br>
+
+    <button type="submit">Enviar</button>
+</form>
+<h3>Respuesta del servidor:</h3>
+<p id="respuesta"></p>
+
+<script>
+
+    const form = document.getElementById("saludoForm");
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const datos = {
+            nombre: document.getElementById("nombre").value,
+            apellido: document.getElementById("apellido").value
+        };
+
+        const respuesta = await fetch("/saludo", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(datos)
+        });
+
+        const json = await respuesta.json();
+        document.getElementById("respuesta").textContent = json.mensaje;
+    });
+</script>
+</body>
+</html>
