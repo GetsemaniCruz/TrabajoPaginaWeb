@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método POST - Spring Boot</title>
+</head>
+<body>
+<h1>Ejemplo de método POST con Spring Boot</h1>
+
+<form id="saludoForm" >
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" required><br><br>
+
+    <label for="apellidop">Apellido Paterno:</label><br>
+    <input type="text" id="apellidop" required><br><br>
+
+    <label for="apellidom">Apellido Materno:</label><br>
+    <input type="text" id="apellidom" required><br><br>
+
+    <label for="fechaNacimiento">Fecha de Nacimiento:</label><br>
+    <input type="date" id="fechaNacimiento" name="fechaNacimiento" required><br>
+
+    <label>Género:</label><br>
+    <input type="radio" id="generoM" name="genero" value="MASCULINO" required>
+    <label for="generoM">Masculino</label>
+    <input type="radio" id="generoF" name="genero" value="FEMENINO">
+    <label for="generoF">Femenino</label>
+    <input type="radio" id="generoO" name="genero" value="OTRO">
+    <label for="generoO">Otro</label><br>
+
+    <label for="password">Contraseña:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="confirmPassword">Confirmar Contraseña:</label><br>
+    <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+
+
+    <button type="submit">Enviar</button>
+</form>
+<h3>Respuesta del servidor:</h3>
+<p id="respuesta"></p>
+
+<script>
+
+    const form = document.getElementById("saludoForm");
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        // Obtener valores correctamente
+        const generoElement = document.querySelector('input[name="genero"]:checked');
+
+        const datos = {
+            nombre: document.getElementById("nombre").value,
+            apellidop: document.getElementById("apellidop").value,
+            apellidom: document.getElementById("apellidom").value,
+            fechaNacimiento: document.getElementById("fechaNacimiento").value,
+            genero: generoElement ? generoElement.value : "",
+            password: document.getElementById("password").value
+        };
+
+        const respuesta = await fetch("/saludo", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(datos)
+        });
+
+        const json = await respuesta.json();
+        document.getElementById("respuesta").textContent = json.mensaje;
+    });
+</script>
+</body>
+</html>
