@@ -1,0 +1,51 @@
+.container {
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+}
+
+
+.title {
+    color: #3E2D70;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-title {
+    color: #555;
+    margin-top: 30px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+    margin-top: 10px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.group {
+    margin-bottom: 15px;
+}
+
+.submit-button {
+    background-color: #BEB0E8;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 20px;
+    border-color: #BEB0E8;
+}
+
+.response-area {
+
+    padding: 10px;
+}
