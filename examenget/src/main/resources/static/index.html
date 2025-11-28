@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+<div class="fondo">
+<h1 class="letra">Examen de recuperacion</h1>
+<form id="saludo">
+    <label for="nombre" class="letra">Nombre:</label><br>
+    <input type="text" id="nombre"><br><br>
+
+    <label for="apellidop" class="letra">Apellido Paterno:</label><br>
+    <input type="text" id="apellidop"><br><br>
+
+    <label for="apellidom" class="letra">Apellido Materno:</label><br>
+    <input type="text" id="apellidom"><br><br>
+
+    <label for="correo" class="letra">Correo electronico:</label><br>
+    <input type="email" id="correo"><br><br>
+
+    <label for="contra" class="letra">Contraseña:</label><br>
+    <input type="text" id="contra"><br><br>
+
+    <button type="submit" class="boton letra2">Registrar</button>
+
+</form>
+<h3 class="letra">Respuesta del servidor:</h3>
+<p id="respuesta" class="letra"></p>
+
+ <scrip>
+     const form = document.getElementById("saludo");
+     form.addEventListener("submit", async (event) => {
+     event.preventDefault();
+
+     const datos = {
+     nombre: document.getElementById("nombre").value,
+     apellidop: document.getElementById("apellidop").value,
+     apellidom: document.getElementById("apellidom").value,
+     correo: document.getElementById("correo").value,
+     contra: document.getElementById("contra").value
+     };
+
+     const respuesta = await fetch("/saludo", {
+     method: "POST",
+     headers: { "Content-Type": "application/json" },
+     body: JSON.stringify(datos)
+     });
+
+     const json = await respuesta.json();
+     document.getElementById("respuesta").textContent = json.mensaje;
+     });
+
+     function validarDatos() {
+     const correoValor = correo.value.trim();
+     const contraseniaValor = contra.value.trim();
+
+     if (correoValor === "" && contraseniaValor === "") {
+     resultadoDiv.innerHTML = "<p>Por favor, ingresa un correo y una contraseña.</p>";
+     } else if (correoValor === "") {
+     resultadoDiv.innerHTML = "<p>Aún no has ingresado un correo.</p>";
+     } else if (contraseniaValor === "") {
+     resultadoDiv.innerHTML = "<p>Aún no has ingresado una contraseña.</p>";
+     } else {
+     resultadoDiv.innerHTML = "<p>Datos ingresados correctamente.</p>";
+     }
+     }
+ </scrip>
+</div>
+</body>
+</html>
