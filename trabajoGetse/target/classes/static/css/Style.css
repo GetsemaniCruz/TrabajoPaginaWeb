@@ -1,0 +1,19 @@
+.input{
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+.boton{
+    background-color: #3d135a;
+    padding: 12px 20px;
+    border-radius: 4px;
+    border-color: #190947;
+}
+.letra{
+    font-family: "Baskerville Old Face";
+    color: #3E2D70;
+}
+.letra2{
+    font-family: "Baskerville Old Face";
+    color: #ffffff;
+}

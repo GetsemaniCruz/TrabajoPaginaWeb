@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabajo</title>
+    <link rel="stylesheet" href="css/Style.css">
+</head>
+<body>
+<h1 class="letra">Trabajo </h1>
+<form id="saludo">
+
+    <label for="usuario" class="letra">Usuario:</label>
+    <input type="text" id="usuario" class="input"><br><br>
+
+    <label for="contra" class="letra">Contraseña:</label>
+    <input type="password" id="contra" class="input"><br><br>
+
+    <button type="submit" class="boton letra2">Enviar</button>
+</form>
+<h3>Respuesta del servidor:</h3>
+<p id="respuesta"></p>
+<script>
+    const form = document.getElementById("saludo");
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const usuario = document.getElementById("usuario").value;
+        const contra  = document.getElementById("contra").value;
+
+        if(usuario === "" || contra === ""){
+            document.getElementById("respuesta").textContent = "Llena todos los campos";
+            return;
+        }
+
+        const datos = {
+            usuario: document.getElementById("usuario").value,
+            contra: document.getElementById("contra").value
+        };
+
+        const respuesta = await fetch("/saludo", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(datos)
+        });
+
+        const json = await respuesta.json();
+        document.getElementById("respuesta").textContent = json.mensaje;
+    });
+
+</script>
+</body>
+</html>
