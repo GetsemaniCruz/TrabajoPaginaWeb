@@ -64,7 +64,7 @@
     async function createUser() {
         const name = document.getElementById("name").value;
         const edad = document.getElementById("edad").value;
-        const genero = document.getElementById("genero").value;
+        const genero = document.querySelector('input[name="genero"]:checked')?.value;
         const msg = document.getElementById("create-msg");
 
         msg.innerHTML = "";
@@ -103,7 +103,7 @@
         <div class="user-card">
             <b>ID:</b> ${user.id}<br>
             <b>Nombre:</b> ${user.name}<br>
-            <b>Edad:</b> ${user.edad}
+            <b>Edad:</b> ${user.edad}<br>
             <b>Genero:</b> ${user.genero}
         </div>
     `;

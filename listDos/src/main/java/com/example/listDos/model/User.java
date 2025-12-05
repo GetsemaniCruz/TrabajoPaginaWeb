@@ -4,14 +4,16 @@ public class User {
     private Long id;
     private String name;
     private int edad;
+    private String genero;
 
 
     public User() {}
 
-    public User(Long id, String name, int edad) {
+    public User(Long id, String name, int edad, String genero) {
         this.id = id;
         this.name = name;
         this.edad = edad;
+        this.genero = genero;
     }
 
     public Long getId() {
@@ -36,5 +38,13 @@ public class User {
 
     public void setEdad(int edad) {
         this.edad = edad;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 }
